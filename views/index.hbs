@@ -1,0 +1,20 @@
+<div id="main" class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Últimos projetos enviados</h3>
+
+            <div class="panel">
+                <div class="list-group">
+                    {{#each projetos}}
+                        <a href="#" class="list-group-item">{{this.originalname}} - {{this.desc}} - {{this.createdAt}}</a>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <h3>Enviar um novo projeto</h3>
+            <a href="/upload" class="btn btn-lg btn-default">Enviar novo Projeto</a>
+        </div>
+    </div>
+</div>

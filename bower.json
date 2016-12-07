@@ -1,0 +1,22 @@
+{
+  "name": "RLab",
+  "description": "Laboratório Remoto Para Prototipação de Circuitos Digitais Utilizando Kits de Desenvolvimento FPGAs Xilinx",
+  "main": "",
+  "authors": [
+    "Vicente, C. <cristiano@live.jp>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.6.3"
+  }
+}

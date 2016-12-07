@@ -1,0 +1,57 @@
+<div id="lab_area" class="row">
+
+    <div class="col-xl-6 col-md-5">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-video-camera"></i> Video</h3>
+            </div>
+            <img src="{{camera}}" alt="video" style="max-width: 100%">
+            <input type="hidden" id="device" value="{{device}}">
+        </div>
+    </div>
+
+    <div class="col-xl-6 col-md-7">
+        <div class="row">
+
+            <div class="col-xl-6 col-md-4">
+                <div class="text-center">
+                    <button id="rst" class="btn btn-danger">Reset</button>
+                </div>
+                <br>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-toggle-off"></i> Switches</h3>
+                    </div>
+                    <div class="panel-body" id="sw_panel">
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-6 col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-circle-o"></i> E/S Rx/Tx</h3>
+                    </div>
+                    <div class="panel-body">
+                        <label for="tx">Entrada Tx:</label><textarea name="tx" id="tx" cols="30" rows="10"
+                                                                     class="form-control"></textarea>
+
+                        <br>
+
+                        <form id="frx" action="#">
+                            <label for="rx">Saída Rx:</label>
+                            <input name="rx" id="rx" type="text" class="form-control">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#if debug}}
+    <label for="impact_debug">iMPACT debug:</label>
+    <pre id="impact_debug">{{debug}}</pre>
+{{/if}}

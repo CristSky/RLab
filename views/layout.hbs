@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
+
+    <link rel='stylesheet' href='/public/stylesheets/style.css'/>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navrlab">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-lg fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="/"><i class="fa fa-lg fa-microchip"></i> R-Lab</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navrlab">
+            <ul class="nav navbar-nav">
+                <li id="li_bit_upload"><a href="/upload">Enviar Novo Projeto</a></li>
+                <li id="li_download"><a href="/download">Donwload</a></li>
+            </ul>
+
+            <!--menu direita-->
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false"><i class="fa fa-lg fa-user-circle-o"></i> {{user_name}} <span
+                            class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/config">Configurar</a></li>
+                        <!--<li><a href="#">Nada</a></li>-->
+                        <!--<li><a href="#">Nada</a></li>-->
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#" id="btn-logout">Sair</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="conteiner-fluid maxh">
+
+    {{{body}}}
+
+</div>
+<!--<pre><strong>Debug</strong><br><strong>Titulo:</strong> {{title}} <strong>View_Ref:</strong> {{ref}}</pre>-->
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/public/javascripts/rlab.js"></script>
+</body>
+</html>

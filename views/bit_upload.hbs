@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="lb-box" id="bit_upload">
+        <div class="container-fluid text-center">
+            <h3 class="text-center">Selecione o arquivo .bit</h3>
+
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <input type="file" id="file_input" name="bit_file" title="Selecione o bitstream"
+                           data-filename-placement="inside"
+                           accept=".bit" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="device">Selecione o dispositivo</label>
+                    <select name="device" id="device" class="form-control" required>
+                        <option></option>
+                        {{#each devices}}
+                            {{#if this.busy}}
+                                <option value="" disabled>{{this.dispositivo}} [Dispositivo em uso, aguarde]</option>
+                            {{else}}
+                                <option value="{{this.id}}">{{this.dispositivo}}</option>
+                            {{/if}}
+                        {{/each}}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="desc">Descrição</label>
+                    <input type="text" id="desc" name="desc" class="form-control" placeholder="Opcional"
+                           maxlength="254">
+                </div>
+                <br>
+                <input class="btn btn-primary" type="submit" value="Enviar .bit" name="submit">
+            </form>
+        </div>
+    </div>
+</div>
+<br>
+{{#if msg}}
+    <div class="container alert alert-danger text-center">
+        <strong>Nenhum Dispositivo Conectado ou Disponivel no Servidor</strong>
+        <br>
+        <strong>Vá para <a href="/config">configurações</a> para adicionar um dispositivo se disponível.</strong>
+    </div>
+{{/if}}
+{{#if debug}}
+    <label for="impact_debug">iMPACT debug:</label>
+    <pre id="impact_debug">{{debug}}</pre>
+{{/if}}
+
+

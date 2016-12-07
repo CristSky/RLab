@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="lb-box" id="download">
+        <div class="container-fluid text-center">
+            <h4 class="text-center">Módulo modelo VHDL - UART R-Lab</h4>
+            <br>
+            <a href="/download/uart_file"><i class="fa fa-lg fa-download" aria-hidden="true"> UART R-Lab.zip</i></a>
+            <br>
+            <br>
+            <hr>
+            <h4>Download dos últimos arquivos enviados.</h4>
+            <div class="panel">
+                <div class="list-group">
+                    {{#each projetos}}
+                        <a href="#" class="list-group-item">{{this.originalname}} - {{this.desc}} - {{this.createdAt}}</a>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

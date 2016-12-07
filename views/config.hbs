@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="lb-box text-center">
+        <h3>Configurações do dispositivo.</h3>
+        <div class="spinner" id="view_config">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+            <p>Carregando</p>
+        </div>
+
+        <form id="form_config" method="post" role="form" action="/config" class="form">
+            <p>Associe cada dispositivo a uma porta diferente.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <label>FPGA</label>
+                </div>
+                <div class="col-md-2">
+                    <label>Porta</label>
+                </div>
+                <div class="col-md-6">
+                    <label>Camera IP (URL direta do video)</label>
+                </div>
+            </div>
+            <div id="fpga_list"></div>
+            <div class="form-group">
+                <input id="fpga_list_send" type="submit" class="btn btn-primary" disabled value="Confirmar">
+            </div>
+        </form>
+    </div>
+</div>

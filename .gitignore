@@ -1,0 +1,10 @@
+/_impactbatch.log
+/run_impact/*.bit
+/run_impact/set*
+bit_upload/*
+/node_modules
+/.idea
+/bower_components/
+/tests/
+
+
